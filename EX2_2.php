@@ -13,7 +13,7 @@ Réaliser un algorithme permettant d’afficher le tableau HTML suivant (notez q
         "USA"=>"Washington",
         "Italie"=>"Rome"
     ];
-// afficher table HTM//
+// afficher table HTML //
     echo afficherTableHTML($capitales);
 
     function afficherTableHTML(array $capitales = ["clé" => "valeur"]): string {
