@@ -10,7 +10,7 @@ $capitales = [
    "Espagne" => "Madrid"
 ];
 
-// AFFICHER TABLE HTML AVEC LIENS HYPERTEXTE //
+// AFFICHER TABLE HTML AVEC LIENS HYPERTEXTE  //
 
 function afficherTableauLiens (array $capitales = ["pays" => "ville"]): string {
     ksort ($capitales);
