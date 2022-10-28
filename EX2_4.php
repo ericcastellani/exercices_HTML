@@ -28,8 +28,8 @@ function afficherTableauLiens (array $capitales = ["pays" => "ville"]): string {
                     "<tr>
                         <td>".mb_strtoupper($pays)."</td>
                         <td>".ucfirst ($ville)."</td>
-                        <a href="https://fr.wikipedia.org/wiki/" target ="_blank">lien </a>
-                   </tr>";
+                       <td><a href='https://fr.wikipedia.org/wiki/$ville' target ='_blank'>lien </a></td>
+    				</tr>";
 
             }
                 $result .="</tbody></table>";
