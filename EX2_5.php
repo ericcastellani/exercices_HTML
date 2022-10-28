@@ -12,17 +12,17 @@ $nomsInput=["Nom","Prénom","Ville"];
 
 //echo afficherInput ($nomsInput);
 				
-foreach ($nomsInput as $nom){
-	echo $nom;}//"<input type ='texte'";//
-	//echo "<input type ='texte'";//}
-//}
-//function afficherInput ($nomsInput){
-	//$result = "<input type ='texte'";}
-		//foreach ($nomsInput as $nom){
-		//$result ="<input type ='texte'"; 
-		//return $result;}
+function afficherInput ($nomsInput){
+	$result = "";
+	foreach ($nomsInput as $nom){
+		$result .= "
+			<label for='$nom'>$nom</label><br>
+			<input type='text'id='$nom' name='$nom'><br>"; 
+	}
+	return $result;
+} 
 	
 	
 
 
-//echo afficherInput ($nomsInput);//
+echo afficherInput($nomsInput);
