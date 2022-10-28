@@ -6,7 +6,7 @@ function alimenterListeDeroulante ($elements){
 	foreach ($elements as $genre){
 		$result .="
 			<for label ='$genre'>$genre</label>
-			<select name = '$genre' id=''>
+			<select name = '$genre' id='$genre'>
 			<option value = '$genre'>$genre</option><br>";
 }
 	return $result;
