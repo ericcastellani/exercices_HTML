@@ -37,3 +37,4 @@ function afficherTableauLiens (array $capitales = ["pays" => "ville"]): string {
     }
 echo afficherTableauLiens($capitales);
 
+echo "ok";
