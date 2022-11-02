@@ -9,7 +9,7 @@
 <body>
     <h1>Bienvenue chez Eric CASTELLANI</s>
     <h2>Exerice HTML </h2>
-    <p>Voici quelque lignes pour se familiariser avec HTML.
+    <p>Voici quelque lignes afin de se familiariser avec HTML.
         Je voudrais partager avec vous mes activités préférées.
     </p>
     <h2>Mes activités préférées : </h2>
@@ -62,14 +62,137 @@
     </a>
     <br>
     <p>  </p>
-      <a href="http://elan-formation.fr"target = "_blank">site elan </a>
+    <a href="http://elan-formation.fr"target = "_blank">site elan </a>
+    <hr> </hr>
+    <h4>Exemple de liste à puces grâce à : ul et li</h4>
+    <ul>
+        <li>1er élément</li>
+        <li>2ème élément</li>
+        <li>3ème élément</li>
+    </ul>
+    <h4>Exemple de liste numérotée grâce à : ol et li</h4>
+    <ol>
+        <li>1er élément</li>
+        <li>2ème élément</li>
+        <li>3ème élément</li>
+    </ol>
+    <h4>Personnalisation des listes numérotées</h4>
+    <p></p>
+    <h4>Nombre en anglais à partir de 10 grâce à : ol start =""</ol> </h4>
+    <ol start = "10">
+        <li>Number ten</li>
+        <li>Number eleven</li>
+        <li>Number twelve</li>
+    </ol>
 
+    <h4>Numérotation décroissante grâce à : ol reversed</ol> </h4>
+    <ol reversed>
+        <li>Le 3ème</li>    
+        <li>Le 2ème</li>
+        <li>Le 1er</li>
+    </ol>
+    <h4>Changer de style grâce à : ol type =""</h4>
+    <ol type = "a">
+        <li>Le 3ème</li>    
+        <li>Le 2ème</li>
+        <li>Le 1er</li
+    </ol>
+<hr> </hr>
+<h1>-----TABLEAUX-----</h1>
+<h4>En HTML, l'utilisation de tableaux et à reserver à 
+    la présentation de données numériques ou d'informations
+    synthétiques. Lorsqu'il s'agira de placer côte à côte les
+    différentes parties d'une page. Nous utiliserons des blocs
+     div en les postionnant à l'aide d'une feuille de style (css)
+</h4>
+<p></p>
+<h4>Création d'un tableau HTML</h4>
+<p>Un tableau est délimité par des balises HTML :   table. </p>
+<p>Initialement, les bordures du tableau sont invisibles ; il faut 
+    don indiquer l'apaisseur de la bordure en pixels à l'aide d'une 
+    des 2 méthodes suivantes : - en associant   -border-   à la 
+    balise -table- ou en définissant cette bordure de tableaux.
+    à l'intérieur d'une feuille de styles css.
+</p>
+<p>
+    Le tableau se construit ligne par ligne, avec des balises
+    -tr- pour table row en anglais, c'est à dire rangée de tableau.
+</p>
+<p>Les cellules du tablau sont définie à l'intérieur de chaque
+    ligne grâce aux balises -td- comme table data.
+</p>
+<p>
+    Lorsqu'il s'agit d'une cellule titre, on utilise à la place
+    les balises -th- comme table header ou en-tête du tableau.
+    Le texte est alors mis  en gras et centré.
+</p>
+<h4>Exemple de tableau</h4>
+<table border = "1">
+    <tr> <!--Cette balise contient 2 cellules d'entête pays
+    et capitale ainsi que 2 lignes contenant les données
+    du tableau (dans notre exemple)-->
+        <th>Pays </th><!--balise de titre -->
+        <th>capitale</th>
+    </tr>
+    <tr>
+        <td>France</td> <!--balise data-->
+        <td>Paris</td>
+    </tr>
+    <tr>
+        <td>Espagne</td> <!--autre balise data-->
+        <td>Madrid</td>
+    </tr>
+</table>
+<h4>Fusionner les cellules</h4>
+<p>L'attribut colspan permet de fusionner horizontalement 
+    les cellules de plusieurs colonnes. par exemple, la balise
+    - td colspan ="3" fusionnera 3 cellules sur une ligne.
+</p>
+<p>De même l'attribut -rawspan- sert à fusionner verticalement
+    les cellules de plusieurs lignes.
+</p>
+<h4>Exemple de tableau avec cellules fusionnées</h4>
+<table border = "1">
+    <tr> 
+        <th colspan="2"> INFO du Pays </th> <!--Fusion sur ligne-->
 
-
-
-
-
-    
-
+    </tr>
+    <tr>
+        <td>Pays</td>
+        <td>Langue</td>
+    </tr>
+    <tr>
+        <td>Espagne</td> 
+        <td>espagnol</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Canada</td> <!--Fusion sur colonne-->
+        <td>anglais</td> <!--ATTENTION IL FAUT METTRE LA
+        PREMIERE LIGNE DANS td rowspan pour qu'il commence à
+        fusionner la colonne-->
+    </tr>
+    <tr>
+        <td>francais</td> <!--LA DEUXIEME LIGNE est en dehors
+         de td rowspan et pourtant elle a fusionné-->
+    </tr>
+</table>
+<hr> </hr>
+<h3>INSERTION D'IMAGES</h3>
+<p>La création d'une page web contenant texte et images
+    nécessite plusieurs fichiers. Pour ne pas alourdir la 
+    page il est important d'utiliser des formats d'image
+    compressés.
+</p>
+<h4>LA BALISE IMAGE</h4>
+<p>En HTML, insérer une image revient à placer un lien vers
+    le fichier qui la contient avec la balise : -img- et elle
+    contient obligatoirement l'attribut -src- qui indique le 
+    nom du fichier à afficher :</p>
+    <p> img src = "" alt = "" title""
+</p>
+<img src="C:\Users\CASTELLANI ERIC\Pictures\Saved Pictures\simpsons.png" alt="Les Simpsons"
+title = "Les simpsons">
+<hr> </hr>
+<h2>La suite sur COURS_HTML2.html</h2>
 </body>
 </html>
