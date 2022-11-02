@@ -1,18 +1,15 @@
 <?php
 echo "Exercice 8 partie 2 PHP <br>";
-//<source><img src="http://my.mobirise.com/data/userpic/764.jpg" alt="petit chien">
+//<source><c>
 
 // definition des variables
 
 $url="http://my.mobirise.com/data/userpic/764.jpg";
 $nbre = 4;
 
-function repeterImage ($url,$nbre){$result="";
-    foreach($nbre as $valeur) {
-    $result .="
-    img src='$url' alt=''";
+function repeterImage ($url,$nbre){
+    for ($i=1;$i<=$nbre;$i++){
+    echo "<img src ='$url'>";  // permet d'afficher image dans php
     }
-    return $result;
 }
-
 echo repeterImage($url,$nbre);
