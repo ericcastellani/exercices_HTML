@@ -1,14 +1,16 @@
 <?php
-
-$elements = ["Monsieur","Madame","Mademoiselle"];
+echo "Exercice n° 6 partie 2<br>";
+$elements = ["monsieur","madame","mademoiselle"];
 function alimenterListeDeroulante ($elements){
 	$result ="";
 	foreach ($elements as $genre){
 		$result .="
-			<for label ='$genre'>$genre</label>
+			<label for ='$genre'>$genre</label>
 			<select name = '$genre' id='$genre'>
-			<option value = '$genre'>$genre</option><br>";
+				<option value = '$genre'>$genre</option>
+			</select>
+			</label>";
 }
-	return $result;
+	return $result;}
 
-echo alimenterListeDeroulante($elements);}
+echo alimenterListeDeroulante($elements);
