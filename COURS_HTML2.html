@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>BALISES FORMULAIRE</h3>
+    <p>L'ensemble du formulaire se trouve dans la balise : -form-
+        La balise de début doit contenir au minimum 2 attributs :
+    </p>
+    <p>La méthode d'envoi des données, en principe - method="post"
+        permet l'envoi masqué des données.
+    </p>
+    <p>Le fichier qui effectuera l'action d'envoi du message
+        et le confirmera au visiteur, tel que -action ="envoi.php".
+    </p>
+    <p>Tout formulaire sera donc encadré par des balises 
+        de de ce type, avec ici l'appel d'un fichier -envoi.php 
+        qu'il faudra écrire pour transmettre le message.
+    </p>
+    <form method="post" action = "envoi.php">
+        .... toutes les balises du formulaire seront ici ...
+    </form>
+    <p>Pour améliorer la présentation, il est possible de lier
+        visuellement certaines parties du formulaire, en les plaçant
+        dans des bailses -fieldset-.  
+    </p>
+    <p>A l'intérieur de chaque balise -fieldset-,il est
+        possible d'ajouter un sous-tritre pour la partie de 
+        formulaire concernée : celui-ci est à écrire dans la  balise :
+        - legend -. Le filet d'encadrement s'interrompt alors en haut
+        à gauche pour laisser la place à un sous-titre.    
+    </p>
+    <h3>Les étiquettes :</h3>
+    <p>Ce sont des textes qui présentent les zones de saisie
+        comme des cases noms par ex.
+        Chacune d'entre elles est encadrée par les balises - label-qui 
+        signifie étiquette en anglais.
+        Il est recommandé d'utiliser l'attribut -for- avec cette balise.
+    </p>
+    <label for ="adresse">Votre adresse</label>
+    <h4>Zones de textes simples :</h4>
+    <p>La balise -input- correspond à une entrée ou saisie d'informations.
+        Elle peut prendre différentes formes, notamment celle d'une zone
+        de saisie à une seule ligne : elle est idéale pour indiquer
+        un nom, un prénom, .....
+    </p>
+    <p>Elle possède comme attributs principaux :</p>
+    <p>* son nom : name = "" qui sert à identifier les donnée 
+        lors de l'envoi du formulaire. ce nom sera sans accent ni espaces
+    </p>
+    <p>* le type, qui sera : type = "text" pour un texte en clair
+        et type = "password" pour un mot de passe.
+    </p>
+    <p>* éventuellement, un texte prédéfini à afficher dans la 
+        zone de saisie, qui sera indiquée par l'attribut : value =""  
+    </p>
+    <p>* un identifiant : id="" pour faire le lien avec 
+        l'attribut -for- de la balise -label- qui lui sert de titre.
+    </p>
+    <label for="txnom">Nom ou pseudo</label>
+    <input type = "text"id = "txnom" name ="nom">
+    <br>
+    <label for="passe">Mot de passe</label>
+    <input id="passe" type ="password" name="motdepasse">
+    <br>
+    <h4>Zones de texte sur plusieurs lignes</h4>
+    <p>Lorsque le contenu à saisir dans une zone de texte est
+        susceptible de comporter plusieurs lignes, il faut utiliser
+    la balise -textarea-
+    </p>
+    <label for="message">Votre message</label>
+    <textarea id="msg" name = "messsage">Tapez ici votre message</textarea>
+    <p>Contrairement à la balise -input- qui s'utilise seule
+        il existe une balise de fermeture -/textarea- 
+    </p>
+    <h4>Boutons radio à choix unique</h4>
+    <p>Les boutons ronds, appelés boutons radio, sont utilisés 
+        lorsqu'il s'agit d'effectuer un choix exclusif dans une 
+        liste d'option.
+    </p>
+    <p>C'est la balise -input- qui est à nouveau utilisée ici 
+        avec l'attribut : type ="radio"
+    </p>
+    <input type="radio" name = "navig" value = "trés simple">
+    <label for="rl">Très simple</label>
+    <input type="radio" name="navig" id = "rl"
+        value="correcte" checked>
+    <label for="r2">Correcte</label>
+    <input type="radio" name="navig" id="r2" value="compliquée">
+    <label>compliquée</label>
+    <h4>Cases à cocher</h4>
+    <p>Contrairement au bouton radio, les cases à cocher permettent
+        plusieurs choix ou aucun. C'est toujours la balise -input-
+        qui est utilisée avec l'attribut : type="checkbox"
+    </p>
+    <input id="choix1" name="instructif" type="checkbox" value="instructif">
+    <label for="choix1">Instructif</label>
+    <input id="choix2" name="esthetique" type="checkbox" value="esthetique">
+    <label for="choix2">Esthétique</label>
+    <input id="choix3" name="clair" type="checkbox" value="clair">
+    <label for="choix3">Clair</label>
+    <input id="choix4" name="pratique" type="checkbox" value="pratique">
+    <label for="choix4">Pratique</label>
+    <p>Alors que le choix unique du bouton radio ne représentait
+        qu'une seule donnée, les balises -input- de type -checkbox
+        possèdent des attributs : name="" différents.
+    </p>
+    <h4>Listes déroulantes</h4>
+    <p>Une liste déroulante permet un choix unique et s'écrit
+        à l'aide des balises -select- et -option-
+    </p>
+    <p>L'ensemble de la liste est encadrée par les balises : 
+        select name="" . Chaque ligne étant définie entre les
+        balises -option value ="" - 
+    </p>
+    <label for="infosite">Comment avez-vous connu ce site ?</label>
+    <select id="infosite" name="connaissance">
+        <option value="presse">Presse</option>
+        <option value="internet">Internet</option>
+        <option value="autre">Amis ou autres</option>
+    </select>
+
+
+
+</body>
+</html>
