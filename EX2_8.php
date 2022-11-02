@@ -1,6 +1,5 @@
 <?php
 echo "Exercice 8 partie 2 PHP <br>";
-//<source><c>
 
 // definition des variables
 
