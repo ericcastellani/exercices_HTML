@@ -13,5 +13,6 @@ $metier = $_POST["metier"];
 // TEXTE A ENVOYER
 
 $texte = "Nom : $nom\n";
+$texte = "prenom : $prenom\n";
 
 
