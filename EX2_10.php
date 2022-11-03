@@ -1,32 +1,45 @@
 <?php
 echo "Exercice 10 partie 2 PHP <br>";
 
-// RECUPERATION DES DONNEES DU  FORMULAIRE D'INSCRIPTION
+$formulaire = "<form action='#' method='POST'>
+<h2>FORMULAIRE D'INSCRIPTION</h2>
+<h3>Etat civil</h3>
+<label for ='txtnom'>Nom</label>
+<input type='text' id='txtnom' name='nom'><br><br>
+<label for ='txtprenom'>Prenom</label>
+<input type='text' id='txtprenom' name='prenom'><br><br>
+<label for ='txtemail'>Adresse mail</label>
+<input type='email' id='txtemail' name='adressemail'><br><br>
+<label for ='txtville'>Ville</label>
+<input type='text' id='txtville' name = 'ville'><br><br>
+<br>
+<label for='genre'>Sexe</label>
+<select id='genre' name='Sexe'>
+    <option value =''></option>
+    <option value ='homme'>Homme</option>
+    <option value ='femme'>Femme</option>
+</select>
+</label>
+<br><br>
+<h3>Formation souhaitée</h3>
+<br>
+<label for='formation'>Métier</label>
+<select id='formation' name='metier'>
+    <option value =''></option>
+    <option value ='developpeurlogiciel'>Développeur logiciel</option>
+    <option value ='designerweb'>Designer web</option>
+    <option value ='integrateur'>Intégrateur</option>
+    <option value ='chefdeprojet'>Chef de projet</option>
+</select>
+</label>
+<br><br>
+<p>Appuyez sur 'Soumettre' pour envoyer le formulaire : </p>
+<input type = 'submit'>
+</form>";
 
-$nom = $_POST["nom"];
-$prenom = $_POST["prenom"];
-$adressemail = $_POST["adressemail"];
-$ville = $_POST["ville"];
-$sexe = $_POST["sexe"];
-$metier = $_POST["metier"];
 
-// TEXTE A ENVOYER
-
-$texte = "Nom : $nom\n";
-$texte =$texte. "prenom : $prenom\n";
-$texte = stripslashes($texte);
-
-//DESTINATAIRE ET OBJET DU MESSAGE
-
-$destinataire = "ecastellani@outlook.fr";
-$objet = "Formulaire d'inscription";
-
-//EN-TETE MASQUEE
-
-$headers = "content-type : text/plain;charset-uft-8";
-
-// ENVOI DU MESSAGE PUIS CONFIRMATION SUR LA PAGE
-
-$envoi_bon = mail($destinataire, $objet, $texte, $headers);
-if($envoi_bon){echo "Envoi OK";}
-else {echo "Erreur";}
+function afficherFormulaire($formulaire){
+    $result = $formulaire;
+    return $result;
+}
+echo afficherFormulaire($formulaire);
