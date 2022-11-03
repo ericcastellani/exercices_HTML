@@ -14,5 +14,19 @@ $metier = $_POST["metier"];
 
 $texte = "Nom : $nom\n";
 $texte = "prenom : $prenom\n";
+$texte = stripslashes($texte);
 
+//DESTINATAIRE ET OBJET DU MESSAGE
 
+$destinataire = "ecastellani@outlook.fr";
+$objet = "Formulaire d'inscription";
+
+//EN-TETE MASQUEE
+
+$headers = "content-type : text/plain;charset-uft-8";
+
+// ENVOI DU MESSAGE PUIS CONFIRMATION SUR LA PAGE
+
+$envoi_bon = mail($destinataire, $objet, $texte, $headers);
+if($envoi_bon){echo "Envoi OK";}
+else {echo "Erreur";}
