@@ -13,7 +13,7 @@ $metier = $_POST["metier"];
 // TEXTE A ENVOYER
 
 $texte = "Nom : $nom\n";
-$texte = "prenom : $prenom\n";
+$texte =$texte. "prenom : $prenom\n";
 $texte = stripslashes($texte);
 
 //DESTINATAIRE ET OBJET DU MESSAGE
