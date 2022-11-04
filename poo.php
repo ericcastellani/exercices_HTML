@@ -1,3 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<?php
+	require 'utilisateur.class.php';
+		$pierre = new utilisateur();//le mot new est utilisé pour instancier une classe cad créer une nouvelle instance d'une classe
+		$mathilde = new utilisateur();
+
+		$pierre->user_name = "Pierre";/*->opérateur objet. Cet opérateur 
+		sert à indiquer au PHP qu'on souhaite accéder à un élement défini
+		dans notre classe via un objet créé à partir de cette classe. fa-il
+		n'y a pas de signe $ avant le nom de la propriété à laquelle on
+		 souhaite accéder */
+		$pierre->user_pass = 'abcdef';
+
+		echo $pierre->getNom().'<br>';
+
+		$mathilde->user_name = 'Math';
+		$mathilde->user_pass = 123456;
+
+
+
+
+
+
+
+
+	echo" bonjour";
+
+
+
+?>
+</body>
+</html>
 <?php
 
 echo "<h4> PROGRAMMATION OBJET</h4>";
@@ -43,3 +84,6 @@ $dateUne =new DateTime;
 $dateDeux = $dateUne;
 $dateDeux->moditfy('+1 day');
 var_dump($dateUne, $dateDeux);*/
+echo "On va déjà pouvoir créer des variables à l’intérieur de nos classes. Les variables créées dans les classes sont appelées des propriétés, afin de bien les différencier des variables « classiques » créées en dehors des classes.";
+
+echo"Une propriété, c’est donc tout simplement une variable définie dans une classe (ou éventuellement ajoutée à un objet après sa création).";
