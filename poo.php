@@ -10,20 +10,25 @@
 <body>
 	<?php
 	require 'utilisateur.class.php';
-		$pierre = new utilisateur();//le mot new est utilisé pour instancier une classe cad créer une nouvelle instance d'une classe
-		$mathilde = new utilisateur();
+		$pierre = new Utilisateur("Pierre", "1234", "Stras");//le mot new est utilisé pour instancier une classe cad créer une nouvelle instance d'une classe
+		$mathilde = new Utilisateur("Mathilde", "abcd", "Colmar");
 
-		$pierre->user_name = "Pierre";/*->opérateur objet. Cet opérateur 
+		//$pierre->setNom("Pierre");
+		/*->opérateur objet. Cet opérateur 
 		sert à indiquer au PHP qu'on souhaite accéder à un élement défini
 		dans notre classe via un objet créé à partir de cette classe. fa-il
 		n'y a pas de signe $ avant le nom de la propriété à laquelle on
 		 souhaite accéder */
-		$pierre->user_pass = 'abcdef';
+		//$pierre->user_pass = 'abcdef';
 
 		echo $pierre->getNom().'<br>';
+		echo $mathilde->getNom().'<br>';
 
-		$mathilde->user_name = 'Math';
-		$mathilde->user_pass = 123456;
+		$mathilde->setNom("Dupont");
+
+		echo $mathilde->getNom().'<br>';
+		echo $mathilde->getVille();
+
 
 
 
