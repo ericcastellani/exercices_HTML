@@ -15,9 +15,8 @@ $jour2 = date("j",$date2);
 $mois =date("F",$date2);
 $annee =date("Y",$date2);
 // DETERMINATION DU JOUR DE LA SEMAINE
-echo dateToFrench ("now","l j F Y");
 echo $jour." le ".$jour2;
-echo $mois." ". $annee;
+echo $mois." ". $annee."<br>";
 //CONVERTIR UNE DATE EN FRANCAIS
 
  function dateToFrench($date, $format) 
@@ -28,4 +27,5 @@ echo $mois." ". $annee;
     $french_months = array('janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
     return str_replace($english_months, $french_months, str_replace($english_days, $french_days, date($format, strtotime($date) ) ) );
 }
-echo dateToFrench($date, $format);
+echo dateToFrench($date,"l")." le ".dateToFrench($date," j F Y");
+gi
