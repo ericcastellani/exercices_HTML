@@ -1,7 +1,7 @@
 <?php
 echo "Exercice 11 partie 2 PHP <br><br>";
 
-$date = "2018-02-24";
+$date = "2018-02-23";
 
 echo $date;echo"<br>";
 
@@ -20,7 +20,7 @@ echo $mois." ". $annee."<br>";*/
 
 //CONVERTIR UNE DATE EN FRANCAIS
 
- function dateToFrench($date, $format) 
+ function formaterDateFr($date, $format) 
 {
     $english_days = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
     $french_days = array('lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche');
@@ -28,4 +28,4 @@ echo $mois." ". $annee."<br>";*/
     $french_months = array('janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
     return str_replace($english_months, $french_months, str_replace($english_days, $french_days, date($format, strtotime($date) ) ) );
 }
-echo dateToFrench($date,"l")." le ".dateToFrench($date," j F Y");
+echo formaterDateFr($date,"l")."  ".formaterDateFr($date," j F Y");
