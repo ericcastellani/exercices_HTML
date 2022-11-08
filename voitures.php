@@ -18,6 +18,9 @@ Class Voiture{
     public function getModele(){
         return $this->_modele;
     } 
+
+        //inutiles pour l'exercice mais au cas où
+
     public function setMarque() {
         $this->_marque = $_marque;
     }
@@ -25,3 +28,6 @@ Class Voiture{
         $this->_modele =$_modele;
     }   
 }
+/*class VoitureElec extends Voiture {
+    $_autonomie = $_autonomie;
+}*/
