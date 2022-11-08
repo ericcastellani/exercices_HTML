@@ -19,29 +19,29 @@ Class Voitures{
 
     // GETTERS ET SETTERS
 
-    public function getMarque() :string{
+    public function getMarque(){
         return $this->_marque;
     }
-    public function getModele() :string{
+    public function getModele(){
         return $this->_modele;
     }
-    public function getNbPortes() :int {
+    public function getNbPortes(){
         return $this->_nbPortes;
     }
-    public function getVitesseActuelle() : int{
+    public function getVitesseActuelle(){
         return $this->_vitesseActuelle;
 
     }
-    public function setMarque(string $_marque) {
+    public function setMarque() {
         $this->_marque = $_marque;
     }
-    public function setModele(string $_modele){
+    public function setModele(){
         $this->_modele =$_modele;
     }
-    public function setNbPortes(int $_nbPortes){
+    public function setNbPortes(){
         $this->_nbPortes = $_nbPortes;
     }
-    public function setVitesseActuelle(int $_vitesseActuelle){
+    public function setVitesseActuelle(){
         $this->_vitesseActuelle = $_vitesseActuelle;
     }
 
@@ -53,7 +53,7 @@ Class Voitures{
     }
     public function Accelerer(){
         $this->_statut = 1;
-        $this->_vitesseActuelle = 0;
+        $this->_vitesseActuelle = $_vitesseActuelle + $vitesse;
     }
     public function Stopper(){
         $this->_statut = 0;
