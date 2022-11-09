@@ -53,7 +53,7 @@ echo "Le véhicule ".$v2->getMarque()." est ".$v2->getStatut()." <br>";
 echo "Sa vitesse actuelle est de : ".$v2->getVitesseActuelle()." km / h<br>";
 echo "<br>";
 
-echo "--> test DECELERER<br>";
+echo "<h3>--> test DECELERER</h3><br>";
 echo "<br>";
 echo "--> le véhicule ".$v1->getMarque()." ".$v1->getModele()." veut décélérer de 60 <br>";
 $vitesse = 60;
@@ -63,3 +63,7 @@ echo "--> le véhicule ".$v1->getMarque()." ".$v1->getModele()." veut décélér
 $vitesse =40;
 $v1->ralentir($vitesse);
 echo "Le véhicule ".$v1->getMarque()." roule à ". $v1->getVitesseActuelle()." km / h<br>";
+echo "--> Le véhicule ".$v2->getMarque()." veut décélérer de 10 <br>";
+$v2->ralentir($vitesse);
+$vitesse = 10;
+echo $v2->getVitesseActuelle()." <br>";
