@@ -33,7 +33,7 @@ Class Voitures{
     public function getVitesseActuelle(){
         return $this->_vitesseActuelle;
     }
-	public function getStatut(){
+	public function getStatut(){//conditions à l'intérieur d'une fonction
 		if($this->_statut) {
 			$result = "démarré";
 		} else {
@@ -50,7 +50,7 @@ Class Voitures{
     public function setNbPortes($_nbPortes){
         $this->_nbPortes = $_nbPortes;
     }
-    public function setVitesseActuelle($_vitesseActuelle){
+    public function setVitesseActuelle($_vitesseActuelle){//calcul à l'intérieur d'une fonction
         $this->_vitesseActuelle = $_vitesseActuelle;
     }
 	public function setStatut($_statut){
@@ -82,6 +82,6 @@ Class Voitures{
 	public function ralentir($vitesse){
 		if($vitesse >$this->_vitesseActuelle){
 			echo "Vous ne pouvez pas ralentir d'avantage que la vitesse actuelle : ";
-		}else {$this->_vitesseActuelle -=$vitesse;}
+		}else {$this->_vitesseActuelle -=$vitesse;}// équivaut à _vitesseActuelle = _vitesseActuelle - $vitesse 
 	}
 }
