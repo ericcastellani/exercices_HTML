@@ -5,16 +5,16 @@ Class Voitures{
     private $_modele;
     private $_nbPortes;
     private $_vitesseActuelle;
-    private $_statut = 0; // indique si est à le moteur est allumé ou éteint
+    private $_statut; // indique si est à le moteur est allumé ou éteint
 
      // Constructeur
-    public function __construct(string $_marque = "", string $_modele = "", $_nbPortes = "",$_vitesseActuelle=0,$_statut=0) {
+    public function __construct(string $_marque = "", string $_modele = "", $_nbPortes = "") {
 
         $this->_marque = $_marque;
         $this->_modele = $_modele;
         $this->_nbPortes = $_nbPortes;
-        $this->_vitessActuelle = $_vitesseActuelle;
-        $this->_statut = $_statut;
+        $this->_vitessActuelle = 0;
+        $this->_statut = false;
     }
 
     // GETTERS ET SETTERS
@@ -48,15 +48,14 @@ Class Voitures{
     // METHODES démarrer, accélérer et stopper
 
     public function Demarrer(){
-        $this->_vitesseActuelle = 0;
-        $this->_statut = 1;   
+        $this->_statut = true;   
     }
-    public function Accelerer(){
-        $this->_statut = 1;
-        $this->_vitesseActuelle = $_vitesseActuelle + $vitesse;
+    public function Accelerer($vitesse){
+        //if
+        $this->_vitesseActuelle += $vitesse;
     }
     public function Stopper(){
-        $this->_statut = 0;
+        //if
         $this->_vitesseActuelle = 0;
     }
 
