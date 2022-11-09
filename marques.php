@@ -1,4 +1,4 @@
-<h4>EXERCICE 14 PARTIE 2</H4>
+<h4>EXERCICE 13 PARTIE 2</H4>
 
 <?php
 
