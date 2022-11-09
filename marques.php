@@ -35,9 +35,9 @@ Class Voitures{
     }
 	public function getStatut(){
 		if($this->_statut) {
-			$result = "Démarré";
+			$result = "démarré";
 		} else {
-			$result = "A l'arrêt";
+			$result = "à l'arrêt";
 		}
 		return $result;
 	}
@@ -81,7 +81,7 @@ Class Voitures{
 	}
 	public function ralentir($vitesse){
 		if($vitesse >$this->_vitesseActuelle){
-			echo "Vous ne pouvez pas ralentir d'avantage que la vitesse actuelle";
+			echo "Vous ne pouvez pas ralentir d'avantage que la vitesse actuelle : ";
 		}else {$this->_vitesseActuelle -=$vitesse;}
 	}
 }
