@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container {
+    display: flex;
+    min-height: auto;
+    justify-content: left;
+    align-items: left;
+
+
+}
+.card{
+    width: 300px;
+    background-color: gray;
+}
+.card_test{
+    height: 200;
+    
+
+}
