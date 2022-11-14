@@ -118,6 +118,9 @@ public function setPrenom($_prenom) {
     $this->_prenom = $_prenom;
 
 }
+// AFFICHER METHODE BIBLIOGRAPHIE CLASSE AUTEUR
+
+
 
 }
 
