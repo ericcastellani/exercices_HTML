@@ -26,7 +26,7 @@ public function __construct(string $_titre = "",$_nbPages = "",$_annee = "",$_pr
 // PUBLIC FUNCTION toString()
 
 public function __toString() {
-    return  $this->_titre ." ". $this->_nbPages ." ".$this->_annee." ".$this->_prix." ".$this->_auteurNom." ".$this->_auteurPrenom;
+    return  $this->_titre ."( ". $this->_annee ." ) :".$this->_nbPages." pages /".$this->_prix." € ".$this->_auteurNom." ".$this->_auteurPrenom;
      $this->_nbPages;
      $this->_annee;
      $this->_prix;
