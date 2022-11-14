@@ -1,0 +1,5 @@
+<h2>RECAPITULATIF PARTIE PHP</h2>
+
+<?php
+
+

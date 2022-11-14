@@ -2,7 +2,7 @@
 
 <?php
 
-class livres{
+class Livres{
     private $_titre;
     private $_nbPages;
     private $_annee;
@@ -26,12 +26,12 @@ public function __construct(string $_titre = "",$_nbPages = "",$_annee = "",$_pr
 // PUBLIC FUNCTION toString()
 
 public function __toString() {
-    return $this->_titre;
-    return $this->_nbPages;
-    return $this->_annee;
-    return $this->_prix;
-    return $this->_auteurNom;
-    return $this->_auteurPrenom;
+    return  $this->_titre ." ". $this->_nbPages ." ".$this->_annee." ".$this->_prix." ".$this->_auteurNom." ".$this->_auteurPrenom;
+     $this->_nbPages;
+     $this->_annee;
+     $this->_prix;
+     $this->_auteurNom;
+     $this->_auteurPrenom;
 
 }
 
@@ -89,4 +89,5 @@ public function setAuteurPrenom($_auteurPrenom) {
 // METHODE AFFICHER BIBLIOGRAPHIE
 
 }
-
+$livre1=new Livres('ca',1138,1986,20,'KING','Stephen');
+echo $livre1;
