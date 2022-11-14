@@ -2,7 +2,7 @@
 
 <?php
 
-class Livres{
+class Livre{
     private $_titre;
     private $_nbPages;
     private $_annee;
@@ -93,10 +93,10 @@ public function afficherBibliographie(){
 
 
 // TEST AFFICHAGE SIMPLE
-$livre1=new Livres('ca',1138,1986,20,'KING','Stephen');
-$livre2=new Livres('Simetierre',374,1983,15,'KING','Stephen');
-$livre3=new Livres('Le Fléau',823,1978,14,'KING','Stephen');
-$livre4=new Livres('Shining',447,1977,16,'KING','Stephen');
+$livre1=new Livre('ca',1138,1986,20,'KING','Stephen');
+$livre2=new Livre('Simetierre',374,1983,15,'KING','Stephen');
+$livre3=new Livre('Le Fléau',823,1978,14,'KING','Stephen');
+$livre4=new Livre('Shining',447,1977,16,'KING','Stephen');
 echo "$livre1 <br>";
 echo "$livre2 <br>";
 echo "$livre3 <br>";
