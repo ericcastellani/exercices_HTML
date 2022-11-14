@@ -81,10 +81,24 @@ public function setAuteurPrenom($_auteurPrenom) {
 
 }
 
+
+
 // METHODE AFFICHER BIBLIOGRAPHIE
 
+public function afficherBibliographie(){
+    echo $this->getTitre(),$this->getAnnee(),$this->getNbPages(),$this->getPrix();}
 }
+
+
+
+
+//AFFICHAGE TEST 
 $livre1=new Livres('ca',1138,1986,20,'KING','Stephen');
-
-
-echo $livre1;
+$livre2=new Livres('Simetierre',374,1983,15,'KING','Stephen');
+$livre3=new Livres('Le Fléau',823,1978,14,'KING','Stephen');
+$livre4=new Livres('Shining',447,1977,16,'KING','Stephen');
+echo "$livre1 <br>";
+echo "$livre2 <br>";
+echo "$livre3 <br>";
+echo "$livre4 <br>";
+$livre1->afficherBibliographie();
