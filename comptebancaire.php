@@ -4,7 +4,7 @@ class CompteBancaire{
     private $_libelle;
     private $_soldeInitial;
     private $_devise;
-    private $_titulaire // à redéfinir en fonction de class CompteBancaire
+    private $_titulaire;// à redéfinir en fonction de class CompteBancaire
 
     //Constructeur
 
