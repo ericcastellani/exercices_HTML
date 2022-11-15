@@ -55,7 +55,10 @@ public function setDateNaissance($_dateNaissance) {
 
 // AFFICHER METHODE BIBLIOGRAPHIE CLASSE AUTEUR
 public function afficherBibliographie(){
-    //forEach sur $this->_bibliographie[]
+    foreach  ($this->_bibliographie[] as $valeur){
+        echo $this->getTitre()." ".$this->getAnnee()." ".$this->getNbPages()." ".$this->getPrix();
+    
+    }
 
 }
 
