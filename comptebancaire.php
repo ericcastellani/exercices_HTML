@@ -31,5 +31,18 @@ public function getTitulaire(){
 }
         // Setters
 
+public function setLibelle($_libelle) {
+    $this->_libelle = $_libelle;
+}
+public function setSoldeInitial($_soldeInitial) {
+    $this->_soldeInitial = $_soldeInitial;
+}
+public function setDevise($_devise) {
+    $this->_devise = $_devise;
+}
+public function setTitulaire($_titulaire) {
+    $this->_titulaire = $_titulaire;// à redéfinir en fonction class CompteBancaire
+}
+
 
 }
