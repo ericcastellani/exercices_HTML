@@ -14,12 +14,12 @@ public function __construct(string $_nom = "",string $_prenom = "",$_dateNaissan
     $this->_dateNaissance = $_dateNaissance;
     
 }
-/*PUBLIC FUNCTION toString()
+//PUBLIC FUNCTION toString()
 
 public function __toString() {
-    return  $this->_titre ."( ". $this->_annee ." ) :".$this->_nbPages." pages /".$this->_prix." € ".$this->_auteurNom." ".$this->_auteurPrenom;
+    return  $this->_prenom ." ". $this->_nom ." ".$this->_dateNaissance ;
     
-}*/
+}
 
 
 
@@ -50,8 +50,10 @@ public function setDateNaissance($_dateNaissance) {
 
 
 
-
 // AFFICHER METHODE BIBLIOGRAPHIE CLASSE AUTEUR
+public function afficherBibliographie(){
+    echo $this->getTitre()." ".$this->getAnnee()." ".$this->getNbPages()." ".$this->getPrix();
+}
 
 
 

@@ -1,5 +1,4 @@
 <?php
-
 require "livre.php";
 require "auteur.php";
 
@@ -16,4 +15,7 @@ $livre3=new Livre('Le Fléau',823,1978,14,$StephenKing);
 
 $livre4=new Livre('Shining',447,1977,16,$StephenKing);
 
-echo $StephenKing;
+echo "$StephenKing <br>";
+
+$livre1->afficherBibliographie();
+$livre2->afficherBibliographie();
