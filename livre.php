@@ -89,16 +89,18 @@ public function afficherBibliographie(){
     echo $this->getTitre()." ".$this->getAnnee()." ".$this->getNbPages()." ".$this->getPrix();}
 }
 
-// CLASSE AUTEUR : Classe indépendante de LIVRE
+/* CLASSE AUTEUR : Classe indépendante de LIVRE
 
 class Auteur{
     private $_nom;
     private $_prenom;
+    private $_dateNaissance;
 
 
-public function __construct(string $_nom = "",string $_prenom = ""){
+public function __construct(string $_nom = "",string $_prenom = "",$_dateNaissance=""){
     $this->_nom = $_nom;
     $this->_prenom = $_prenom;
+    $this->_dateNaissance = $_dateNaissance;
     
 }
 public function getNom(){
@@ -109,6 +111,9 @@ public function getPrenom(){
     return $this->_prenom;
 
 }
+public function getDateNaissance(){
+    return $this->_dateNaissance;
+}
 public function setNom($_nom) {
     $this->_nom = $_nom;
 
@@ -118,15 +123,23 @@ public function setPrenom($_prenom) {
     $this->_prenom = $_prenom;
 
 }
-// AFFICHER METHODE BIBLIOGRAPHIE CLASSE AUTEUR
-
-
+public function setDateNaissance($_dateNaissance) {
+    $this->_dateNaissance = $_dateNaissance;
 
 }
 
 
 
-// TEST AFFICHAGE SIMPLE
+
+// AFFICHER METHODE BIBLIOGRAPHIE CLASSE AUTEUR
+
+
+
+}*/
+
+
+
+/*TEST AFFICHAGE SIMPLE
 $livre1=new Livre('ca',1138,1986,20,'KING','Stephen');
 $livre2=new Livre('Simetierre',374,1983,15,'KING','Stephen');
 $livre3=new Livre('Le Fléau',823,1978,14,'KING','Stephen');
@@ -137,4 +150,4 @@ echo "$livre3 <br>";
 echo "$livre4 <br>";
 
 // TEST AFFICHAGE AVEC METHODE afficherBibliographie
-$livre1->afficherBibliographie();
+$livre1->afficherBibliographie();*/
