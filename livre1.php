@@ -13,7 +13,7 @@ class Livre{
 
 // CONSTRUCTEUR
 
-public function __construct(string $_titre = "",$_nbPages = "",$_annee = "",$_prix = "", Auteur $_auteur){// Auteur $_auteur ==> renvoit à la classe Auteur
+public function __construct(string $_titre,$_nbPages,$_annee,$_prix , Auteur $_auteur){// Auteur $_auteur ==> renvoit à la classe Auteur
     $this->_titre = $_titre;
     $this->_nbPages = $_nbPages;
     $this->_annee = $_annee;
