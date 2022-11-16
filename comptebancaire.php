@@ -13,6 +13,7 @@ public function __construct($_libelle,$_soldeInitial,$_devise,Titulaire $_titula
     $this-> _soldeInitial = $_soldeInitial;
     $this-> _devise = $_devise;
     $this-> _titulaire =  $_titulaire;
+	$this->_titulaire->addCompteBancaire($this);
 }
     // Getters et Setters
         // Getters
@@ -43,6 +44,20 @@ public function setDevise($_devise) {
 public function setTitulaire($_titulaire) {
     $this->_titulaire = $_titulaire;// à redéfinir en fonction class CompteBancaire
 }
+/*
+//Methode afficher comptes d'un titulaire
+public function afficherCompteBancaire(){
+    foreach  ($this->_compteBancaire as $cpte){//attention on ne peut utiliser le $this que dans sa propre classe
+
+        echo $cpte->getLibelle()." : ".$cpte->getSoldeInitial()."  ".$cpte->getDevise()."   <br>";
+    
+    }
+}
 
 
+
+// Methode ajouter comptes (compte courant, livret A,...)
+public function addCompteBancaire(CompteBancaire $cpte){//fonction qui permet d'ajouter un compte
+    $this->_compteBancaire[]=$cpte;
+}*/
 }
