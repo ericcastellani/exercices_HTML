@@ -4,15 +4,15 @@ class CompteBancaire{
     private string $_libelle;
     private float $_soldeInitial;
     private string $_devise;
-    private Titulaire $_titulaire;// à redéfinir en fonction de class CompteBancaire
+    private Titulaire $_titulaire;// renvoit à classe Titulaire
 
     //Constructeur
 
-public function __construct($_libelle,$_soldeInitial,$_devise,$_titulaire){//$_titulaire à redéfinir en fonction compte bancaire
+public function __construct($_libelle,$_soldeInitial,$_devise,Titulaire $_titulaire){
     $this-> _libelle = $_libelle;
     $this-> _soldeInitial = $_soldeInitial;
     $this-> _devise = $_devise;
-    $this-> _titulaire = $_titulaire;// à redéfinir  en fonction class CompteBancaire  
+    $this-> _titulaire =  $_titulaire;
 }
     // Getters et Setters
         // Getters
