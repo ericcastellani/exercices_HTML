@@ -15,3 +15,12 @@ $livre4=new Livre('Shining',447,1977,16,$StephenKing);
 var_dump($StephenKing);
 
 $StephenKing->afficherBibliographie();
+
+$ReneBarjavel = new Auteur("BARJAVEL","René","24-01-1911");
+$livre5 = new Livre ("La nuit des temps",381,1968,15,$ReneBarjavel);
+$livre6 = new Livre ("Le grand secret",450,1973,14,$ReneBarjavel);
+$livre7 = new Livre ("L'enchanteur",502,1984,18,$ReneBarjavel);
+
+var_dump($ReneBarjavel);
+$ReneBarjavel->afficherBibliographie();
+var_dump($ReneBarjavel);
