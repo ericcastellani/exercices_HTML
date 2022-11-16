@@ -4,7 +4,7 @@ class Titulaire{
     private string $_nom;
     private string $_prenom;
     private DateTime $_dateNaissance; //date de naissance définie en DateTime pour pouvoir l'utiliser ensuite en new DateTime (si on avait mis string cela n'aurait pas marché)
-    private array $_compteBancaire;// à redéfinir class CompteBancaire
+    private array $_compteBancaire;// 
 
     // Constructeur
 
@@ -50,7 +50,7 @@ Public function calculAge(){
 	$now =new  DateTime();
 	$age = $this->_dateNaissance->diff ($now);
 	// return $age->format("%Y ans %M mois %d jours");
-	return $age->format("%Y ans");
+	return $age->format("%Y ans"); // comme il s'agit d'une fonction il faut utiliser un return
 }
 
 
@@ -67,7 +67,7 @@ public function afficherCompteBancaire(){
 
 
 // Methode ajouter comptes (compte courant, livret A,...)
-public function addCompteBancaire(CompteBancaire $cpte){//fonction qui permet d'ajouter un livre 
+public function addCompteBancaire(CompteBancaire $cpte){//fonction qui permet d'ajouter un compte
     $this->_compteBancaire[]=$cpte;
 }
 
