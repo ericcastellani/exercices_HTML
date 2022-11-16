@@ -63,8 +63,8 @@ public function addCompteBancaire(CompteBancaire $cpte){//fonction qui permet d'
 
 //METHODE CREDITER UN COMPTE
 
-public function CrediterCompte($credit){
-	$this->_soldeInitial=$this->_soldeInitial + $credit;
+public function CrediterCompte($montant){
+	$this->_soldeInitial=$this->_soldeInitial + $montant;
 	return $this->_soldeInitial;
 
 

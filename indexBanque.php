@@ -26,6 +26,6 @@ echo $BiduleMachin->afficherCompteBancaire();
 
 
 
-$credit = 50;
-//echo $EricCastellani->crediterCompte();
+$montant = 50;
+echo $EricCastellani->crediterCompte($montant);
 
