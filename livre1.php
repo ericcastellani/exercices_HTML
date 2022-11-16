@@ -3,11 +3,11 @@
 <?php
 
 class Livre{
-    private $_titre;
-    private $_nbPages;
-    private $_annee;
-    private $_prix;
-    private $_auteur;
+    private string $_titre;
+    private int $_nbPages;
+    private int $_annee;
+    private float $_prix;
+    private Auteur $_auteur;
 
 
 
@@ -78,57 +78,11 @@ public function setAuteur($_auteur) {
 
 // METHODE AFFICHER BIBLIOGRAPHIE
 
-public function afficherBibliographie(){
-    echo $this->getTitre()." ".$this->getAnnee()." ".$this->getNbPages()." ".$this->getPrix();}
-}
-
-/* CLASSE AUTEUR : Classe indépendante de LIVRE
-
-class Auteur{
-    private $_nom;
-    private $_prenom;
-    private $_dateNaissance;
-
-
-public function __construct(string $_nom = "",string $_prenom = "",$_dateNaissance=""){
-    $this->_nom = $_nom;
-    $this->_prenom = $_prenom;
-    $this->_dateNaissance = $_dateNaissance;
-    
-}
-public function getNom(){
-    return $this->_nom;
-
-}
-public function getPrenom(){
-    return $this->_prenom;
-
-}
-public function getDateNaissance(){
-    return $this->_dateNaissance;
-}
-public function setNom($_nom) {
-    $this->_nom = $_nom;
-
-}
-
-public function setPrenom($_prenom) {
-    $this->_prenom = $_prenom;
-
-}
-public function setDateNaissance($_dateNaissance) {
-    $this->_dateNaissance = $_dateNaissance;
-
+/*public function afficherBibliographie(){
+    echo $this->getTitre()." ".$this->getAnnee()." ".$this->getNbPages()." ".$this->getPrix();}*/
 }
 
 
-
-
-// AFFICHER METHODE BIBLIOGRAPHIE CLASSE AUTEUR
-
-
-
-}*/
 
 
 

@@ -1,10 +1,10 @@
 <?php
 
 class CompteBancaire{
-    private $_libelle;
-    private $_soldeInitial;
-    private $_devise;
-    private $_titulaire;// à redéfinir en fonction de class CompteBancaire
+    private string $_libelle;
+    private float $_soldeInitial;
+    private string $_devise;
+    private Titulaire $_titulaire;// à redéfinir en fonction de class CompteBancaire
 
     //Constructeur
 

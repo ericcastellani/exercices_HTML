@@ -3,10 +3,10 @@
 // CLASSE AUTEUR : Classe indépendante de LIVRE
 
 class Auteur{
-    private $_nom;
-    private $_prenom;
-    private $_dateNaissance;
-    private $_bibliographie;
+    private string $_nom;
+    private string $_prenom;
+    private string $_dateNaissance;
+    private array $_bibliographie;
 
 
 public function __construct(string $_nom = "",string $_prenom = "",$_dateNaissance=""){
@@ -20,7 +20,7 @@ public function __construct(string $_nom = "",string $_prenom = "",$_dateNaissan
 //PUBLIC FUNCTION toString()
 
 public function __toString() {
-    return  $this->_prenom ." ". $this->_nom ." ".$this->_dateNaissance ;
+    return  $this->_prenom ." ". $this->_nom ;
     
 }
 
@@ -55,15 +55,17 @@ public function setDateNaissance($_dateNaissance) {
 
 // AFFICHER METHODE BIBLIOGRAPHIE CLASSE AUTEUR
 public function afficherBibliographie(){
-    foreach  ($this->_bibliographie[] as $valeur){
-        echo $this->getTitre()." ".$this->getAnnee()." ".$this->getNbPages()." ".$this->getPrix();
+	echo "<h1>Livres de $this </h1>";
+    foreach  ($this->_bibliographie  as $livre){//attention on ne peut utiliser le $this que dans sa classe
+
+        echo $livre->getTitre()." (".$livre->getAnnee()." ) :".$livre->getNbPages()." pages ".$livre->getPrix()." €<br>";
     
     }
 
 }
 
 
-public function addLivre($livre){//fonction qui permet d'ajouter un livre 
+public function addLivre(Livre $livre){//fonction qui permet d'ajouter un livre 
     $this->_bibliographie[]=$livre;
 }
 

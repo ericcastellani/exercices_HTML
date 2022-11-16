@@ -1,18 +1,18 @@
 <?php
 
 class Titulaire{
-    private $_nom;
-    private $_prenom;
-    private $_dateNaissance;
-    private $_compteBancaire;// à redéfinir class CompteBancaire
+    private string $_nom;
+    private string $_prenom;
+    private string $_dateNaissance;
+    private array $_compteBancaire;// à redéfinir class CompteBancaire
 
     // Constructeur
 
-public function __construct($_nom,$_prenom,$_dateNaissance,$_compteBancaire){
+public function __construct($_nom,$_prenom,$_dateNaissance){
     $this->_nom = $_nom;
     $this->_prenom = $_prenom;
     $this->_dateNaissance = $_dateNaissance;
-    $this->_compteBancaire = $_compteBancaire;// à redéfinir CompteBancaire
+    $this->_compteBancaire = [];// à redéfinir CompteBancaire
 
 }
 // Getters et Setters
