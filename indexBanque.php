@@ -9,16 +9,16 @@ echo "$EricCastellani <br>";
 echo $EricCastellani->calculAge();
 
 
-var_dump($EricCastellani);
+//var_dump($EricCastellani);
 
 
 $Cpte1 = new CompteBancaire("compte courant",0,"€",$EricCastellani);
 $cpte2 = new CompteBancaire("Livret A",100,"€",$EricCastellani);
-$cpte3 = new CompteBancaire("compe en $",1000,"$",$EricCastellani);
+$cpte3 = new CompteBancaire("compte en $",1000,"$",$EricCastellani);
 $cpte4 = new CompteBancaire("compte postal",500,"€",$BiduleMachin);
 
 echo $EricCastellani->afficherCompteBancaire();
-var_dump($EricCastellani);
+//var_dump($EricCastellani);
 
 echo "$BiduleMachin <br>";
 echo $BiduleMachin->calculAge()."<br>";
@@ -27,5 +27,5 @@ echo $BiduleMachin->afficherCompteBancaire();
 
 
 $montant = 50;
-echo $EricCastellani->crediterCompte($montant);
+ $Cpte->CrediterCompte($montant);
 

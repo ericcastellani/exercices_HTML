@@ -70,6 +70,11 @@ public function afficherCompteBancaire(){
 public function addCompteBancaire(CompteBancaire $cpte){//fonction qui permet d'ajouter un compte
     $this->_compteBancaire[]=$cpte;
 }
+public function CrediterCompte($montant){
+	$this->_soldeInitial=$this->_soldeInitial + $montant;
+	return $this->_soldeInitial;
 
+
+}	
 
 }
