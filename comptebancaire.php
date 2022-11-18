@@ -15,6 +15,14 @@ public function __construct($_libelle,$_soldeInitial,$_devise,Titulaire $_titula
     $this-> _titulaire =  $_titulaire;
 	$this->_titulaire->addCompteBancaire($this);
 }
+    //PUBLIC FUNCTION toString()
+
+public function __toString() {
+    return  $this->_libelle." ". $this->_soldeInitial." ".$this->_devise." ".$this->_titulaire;
+   
+}
+
+
     // Getters et Setters
         // Getters
 

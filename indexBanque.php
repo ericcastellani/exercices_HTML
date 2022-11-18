@@ -6,6 +6,7 @@ require "titulaire.php";
 
 $EricCastellani = new Titulaire("CASTELLANI","Eric","1967-11-01","Compte bancaire");//toujour indiquer la date de naissance en annee- mois- jour 
 $BiduleMachin = new Titulaire("BIDULE","Machin","1900-01-01","compte bancaire");
+
 // Affichage attributs titulaire
 
 echo "<h4> Affichage renseignements titulaire</h4><br>";
@@ -47,8 +48,16 @@ echo $EricCastellani->afficherCompteBancaire();
 
 //affichage débiter compte
 
-echo "<h4> Débiter compte postal de Bidule MACHIN pour 78.63 €</h4><br>";
+echo "<h4> Débiter compte postal de  Machin BIDULE pour 78.63 €</h4><br>";
 $montant =78.63;
 $cpte4->DebiterCompte($montant);
 echo"$BiduleMachin<br>";
-echo $BiduleMachin->afficherCompteBancaire();
+echo $BiduleMachin->afficherCompteBancaire()."<br>";
+
+//affichage informations à partir de compte bancaire
+echo "<h4> Affichage informations compte bancaire</h4><br>";
+echo "$Cpte1<br>";
+echo "$cpte4<br>";
+
+//affichage virement compte à compte
+
