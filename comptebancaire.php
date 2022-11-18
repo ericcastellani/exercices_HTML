@@ -69,4 +69,13 @@ public function CrediterCompte($montant){
 
 
 }
+
+//METHODE DEBITER UN COMPTE
+public function DebiterCompte($montant){
+	$this->_soldeInitial=$this->_soldeInitial - $montant;
+	return $this->_soldeInitial;
+
+
+}
+
 }

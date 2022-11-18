@@ -21,6 +21,7 @@ $Cpte1 = new CompteBancaire("compte courant",0,"€",$EricCastellani);
 $cpte2 = new CompteBancaire("Livret A",100,"€",$EricCastellani);
 $cpte3 = new CompteBancaire("compte en $",1000,"$",$EricCastellani);
 $cpte4 = new CompteBancaire("compte postal",500,"€",$BiduleMachin);
+$cpte5= new comptebancaire("compte courant",327.5,"€",$BiduleMachin);
 
 echo $EricCastellani->afficherCompteBancaire()."<br>";
 var_dump($EricCastellani)."<br>";
@@ -32,7 +33,13 @@ echo $BiduleMachin->afficherCompteBancaire();
 
 
 //affichage créditer compte 
+
+echo "<h4> Créditer compte courant de Eric CASTELLANI pour 50 €</h4><br>";
 $montant = 50;
  $Cpte1->CrediterCompte($montant);
  echo "$EricCastellani<br>";
 echo $EricCastellani->afficherCompteBancaire();
+
+//affichage débiter compte
+
+
