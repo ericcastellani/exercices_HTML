@@ -42,4 +42,8 @@ echo $EricCastellani->afficherCompteBancaire();
 
 //affichage débiter compte
 
-
+echo "<h4> Débiter compte postal de Bidule MACHIN pour 78.63 €</h4><br>";
+$montant =78.63;
+$cpte4->DebiterCompte($montant);
+echo"$BiduleMachin<br>";
+echo $BiduleMachin->afficherCompteBancaire();
