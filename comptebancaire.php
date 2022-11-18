@@ -85,6 +85,11 @@ public function DebiterCompte($montant){
 
 
 }
+public function AfficherTitulaire(){
+    foreach($this->_titulaire as $cpte){
+     echo $compte->getLibelle();
+}
+}
 //METHODE VIREMENT COMPTE A COMPTE
 
 }
