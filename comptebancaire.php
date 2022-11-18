@@ -77,5 +77,6 @@ public function DebiterCompte($montant){
 
 
 }
+//METHODE VIREMENT COMPTE A COMPTE
 
 }
