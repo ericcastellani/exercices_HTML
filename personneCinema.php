@@ -117,6 +117,12 @@ public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
     $this->_film = $_film;// voir si à changer
     $this->_role = $_role;
 }
+// toString()
+
+public function __toString(){
+    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance." : ".$this->_film." ".$this->_role;
+}
+
 
 //getters et setters
 
