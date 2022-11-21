@@ -20,18 +20,37 @@ public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
 //getters et setters
 
     //getters
-    public function getNom(){
-        return $this->_nom;
-    }
-    public function getPrenomRealisateur(){
-        return $this->_prenomRealisateur;
-    }
-    public function getSexeRealisateur(){
-        return $this->_sexeRealisateur;
-    }
-    public function getDateNaissanceRealisateur(){
-        return $this->_dateNaissanceRealisateur;
-    }
+public function getNom(){
+    return $this->_nom;
+}
+public function getPrenom(){
+    return $this->_prenom;
+}
+public function getSexe(){
+    return $this->_sexe;
+}
+public function getDateNaissance(){
+    return $this->_dateNaissance;
+}
+
+    //setters
+public function setNom($_nom){
+    $this->_nom = $_nom;
+}
+public function setPrenom($_prenom){
+    $this->_prenom = $_prenom;
+}
+public function setSexe($_sexe){
+    $this->_sexe = $_sexe;
+}
+public function setDateNaissance($_dateNaissance){
+    $this->_dateNaissance = $_dateNaissance;
+}
+
+
+
+
+
 
 
 }
