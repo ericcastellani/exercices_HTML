@@ -1,5 +1,5 @@
 <?php
-require "PersonneCinema.php";
+/*require "PersonneCinema.php";
 
 Class Acteur extends Personne{
     private string $_filmActeur;// voir si à changer

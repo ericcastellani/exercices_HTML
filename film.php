@@ -5,11 +5,11 @@ Class Film{
     private string $_dateSortie;
     private int $_duree;
     private string $_genre;
-    private  Realisateur $_realisateur; // à changer class Realisateur
+    private  string $_realisateur; // à changer class Realisateur ==>private Realisateur $_realisateur
 
     //constructeur
 
-    public function __construct($_titre,$_dateSortie,$_duree,$_genre,Realisateur $_realisateur){
+    public function __construct($_titre,$_dateSortie,$_duree,$_genre,$_realisateur){// à changer class Realisateur
         $this-> _titre = $_titre;
         $this-> _dateSortie = $_dateSortie;
         $this-> _duree = $_duree;
@@ -61,3 +61,9 @@ Class Film{
 
 
 }
+// TESTS D'affichage
+
+$film1 = new Film("BLADE RUNNER",1982,117,"Science Fiction","Ridley Scott");
+$film2 = new Film("BATMAN",1989,126,"Fantastique","Tim Burton");
+
+
