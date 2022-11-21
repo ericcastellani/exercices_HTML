@@ -1,37 +1,35 @@
 
 <?php
+require "personneCinema.php";
 
-Class Realisateur{
-    private string $_nomRealisateur;
-    private string $_prenomRealisateur;
-    private string $_sexeRealisateur;
-    private string $_dateNaissanceRealisateur;
+Class Realisateur extends Personne{
+    private string $_filmRealisateur;// voir si à changer
+    private string $_synopsis;
 
     // constructeur
 
-public function __construct($_nomRealisateur,$_prenomRealisateur,$_sexeRealisateur,$_dateNaissanceRealisateur){
-    $this->_nomRealisateur = $_nomRealisateur;
-    $this->_prenomRealisateur = $_prenomRealisateur;
-    $this->_sexeRealisateur = $_sexeRealisateur;
-    $this->_dateNaissanceRealisateur = $_dateNaissanceRealisateur;
-
+public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
+    parent :: __construct($_nom,$_prenom,$_sexe,$_dateNaissance);
+    $this->_filmRealisateur = $_filmRealisateur;// voir si à changer
+    $this->_synopsis = $_synopsis;
 }
 
 //getters et setters
 
     //getters
-    public function getNomRealisateur(){
-        return $this->_nomRealisateur;
-    }
-    public function getPrenomRealisateur(){
-        return $this->_prenomRealisateur;
-    }
-    public function getSexeRealisateur(){
-        return $this->_sexeRealisateur;
-    }
-    public function getDateNaissanceRealisateur(){
-        return $this->_dateNaissanceRealisateur;
-    }
+public function getFilmRealisateur(){// voir si à changer
+    return $this->_filmRealisateur;
+}
+public function getSynopsis(){
+    return $this->_synopsis;
+}
+    //setters
+public function setFilmRealisateur($_filmRealisateur){// voir si à modifier
+    $this->_filmRealisateur = $_filmRealisateur;
+}
+public function setSynopsis($_synopsis){
+    $this-> _synopsis = $_synopsis;
+}
 
 
 }

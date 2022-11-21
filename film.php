@@ -20,7 +20,7 @@ Class Film{
     // toString
 
     public function __toString(){
-        return $this->_titre." : ".$this->_dateSortie." / ".$this->_duree." min. ".$this->_genre." / Réalisateur : ";//.$this->_realisateur;
+        return $this->_titre." : ".$this->_dateSortie." / ".$this->_duree." min. ".$this->_genre." / Réalisateur : ".$this->_realisateur;
     }
 
     //getters et setters
@@ -38,8 +38,8 @@ Class Film{
     public function getGenre(){
         return $this-> _genre;
     }
-    public function getAuteur(){
-        return $this-> _auteur;
+    public function getRealisateur(){
+        return $this-> _realisateur;
     }
         //setters
     public function setTitre($_titre){
@@ -54,8 +54,8 @@ Class Film{
     public function setGenre($_genre){
         $this->_genre = $_genre;
     }
-    public function setAuteur($_auteur){
-        $this->_auteur = $_auteur;
+    public function setRealisateur($_realisateur){
+        $this->_realisateur = $_realisateur;
     }
 
 
