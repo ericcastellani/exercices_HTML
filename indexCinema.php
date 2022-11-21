@@ -9,3 +9,4 @@ $film1 = new Film("BLADE RUNNER",1982,117,"Science Fiction",$ridleyScott);
 
 
 echo $film1;
+

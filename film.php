@@ -20,7 +20,7 @@ Class Film{
     // toString
 
     public function __toString(){
-        return $this->_titre." : ".$this->_dateSortie." / ".$this->_duree." min. ".$this->_genre." / Réalisateur : ".$this->_realisateur;
+        return $this->_titre." : ".$this->_dateSortie." / ".$this->_duree." min. ".$this->_genre." / Réalisateur : ";//.$this->_realisateur;
     }
 
     //getters et setters
