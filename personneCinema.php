@@ -50,26 +50,25 @@ public function setDateNaissance($_dateNaissance){
 }
 
 
+
 }
 
 //--------------------CLASSE  EXTENDS REALISATEUR------------------------------------------------------------------------------
 
 Class Realisateur extends Personne{
-    private $_film;// voir si à changer
-    private string $_synopsis;
+    private array $_film;
 
 
     // constructeur
 
-public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance,$_film,$_synopsis){
+public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
     parent :: __construct($_nom,$_prenom,$_sexe,$_dateNaissance);
-    $this->_film = $_film;// voir si à changer
-    $this->_synopsis = $_synopsis;
+	$this->_film = [];
 }
 // toString
 
 public function __toString(){
-    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance." : ".$this->_film." ".$this->_synopsis;
+    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance;// à rajouter film après  méthode afficherfilm
 }
 
 
@@ -77,27 +76,29 @@ public function __toString(){
 //getters et setters
 
     //getters
-public function getFilm(){// voir si à changer
-    return $this->_film;
+public function getFilm(){
+	return $this->_film;
 }
-public function getSynopsis(){
-    return $this->_synopsis;
-}
-    //setters
-public function setFilmRealisateur($_film){// voir si à modifier
-    $this->_film = $_film;
-}
-public function setSynopsis($_synopsis){
-    $this-> _synopsis = $_synopsis;
+
+
+
+public function setFilm($_film){
+    $this-> _film = $_film;
 
 
 }
+// Méthode AddFilm
+public function addFilm(Film $film){//fonction qui permet d'ajouter un film
+    $this->_film[]=$film;
+}	
+
+
 //                      Méthode afficherFilm
 
 public function afficherFilm(){
 	$result = "";
     foreach  ($this->_film as $film){//attention on ne peut utiliser le $this que dans sa propre classe
-        $result .= $film->getTitre()." : ".$film->getAnnee()."  ".$film->getDuree()." ".$film->getGenre()."   <br>";
+        $result .= $film->getTitre()." : ".$film->getdateSortie()."  ".$film->getDuree()." ".$film->getGenre().$film->getRealisateur()."   <br>";
     }
 	return $result;
 }
@@ -107,14 +108,13 @@ public function afficherFilm(){
 //--------------------------------------CLASSE EXTENDS ACTEUR--------------------------------------------------
 
 Class Acteur extends Personne{
-    private string $_film;// voir si à changer
+
     private string $_role;
 
     // constructeur
 
-public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
+public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance,$_role){
     parent :: __construct($_nom,$_prenom,$_sexe,$_dateNaissance);
-    $this->_film = $_film;// voir si à changer
     $this->_role = $_role;
 }
 // toString()
@@ -127,16 +127,11 @@ public function __toString(){
 //getters et setters
 
     //getters
-public function getFilm(){// voir si à changer
-    return $this->_film;
-}
+
 public function getRole(){
     return $this->_role;
 }
-    //setters
-public function setFilm($_film){// voir si à modifier
-    $this->_film = $_film;
-}
+
 public function setRole($_role){
     $this-> _role = $_role;
 }
