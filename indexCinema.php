@@ -12,13 +12,17 @@ $film1 = new Film("BLADE RUNNER",1982,117,"Science Fiction",$ridleyScott);
 $film2 = new Film("BLACK RAIN",1989,125,"Action",$ridleyScott);
 $film3 = new film("GLADIATOR",2000,155,"Film hitorique",$ridleyScott);
 $film4 = new film("BATMAN",1992,126,"Fantastique",$timburton);
+$film5 = new film("BEETLEJUICE",1988,92,"Fantastique",$timburton);
+$film5 = new film("SLEEPY HOLLOW",1999,106,"Fantastique",$timburton);
 
-
-/*echo "$ridleyScott<br>";
-echo "$film1<br>";
-echo "$film2 <br>";
-echo "$film3 <br>";*/
+// TEST D'AFFICHAGE
+echo "<h3>TEST D'AFFICHAGE FILMOGRAPHIE DU REALISATEUR<br></h3>";
+echo "<h4>$ridleyScott<br></h4>";
 echo $ridleyScott->afficherFilm();
+
+echo "<h4>$timburton<br></h4>";
+echo $timburton->afficherFilm();
+
 
 //Acteurs
 

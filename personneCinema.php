@@ -68,7 +68,7 @@ public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
 // toString
 
 public function __toString(){
-    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance;// à rajouter film après  méthode afficherfilm
+    return $this->_nom."  ".$this->_prenom." / ".$this->_sexe." né le  ".$this->_dateNaissance;// à rajouter film après  méthode afficherfilm
 }
 
 
@@ -98,7 +98,7 @@ public function addFilm(Film $film){//fonction qui permet d'ajouter un film
 public function afficherFilm(){
 	$result = "";
     foreach  ($this->_film as $film){//attention on ne peut utiliser le $this que dans sa propre classe
-        $result .= $film->getTitre()." : ".$film->getdateSortie()."  ".$film->getDuree()." ".$film->getGenre().$film->getRealisateur()."   <br>";
+        $result .= $film->getTitre()." / année sortie : ".$film->getdateSortie()." / ".$film->getDuree()." minutes /   ".$film->getGenre()." <br>";//.$film->getRealisateur()."   <br>";
     }
 	return $result;
 }
