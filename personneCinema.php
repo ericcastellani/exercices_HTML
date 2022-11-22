@@ -108,19 +108,22 @@ public function afficherFilm(){
 //--------------------------------------CLASSE EXTENDS ACTEUR--------------------------------------------------
 
 Class Acteur extends Personne{
-
-    private string $_role;
+	private array $_film;
+    private array $_role;
+	private array $_casting;
 
     // constructeur
 
-public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance,$_role){
+public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
     parent :: __construct($_nom,$_prenom,$_sexe,$_dateNaissance);
-    $this->_role = $_role;
+	$this->_film = [];
+    $this->_role = [];
+	$this->_casting = [];
 }
 // toString()
 
 public function __toString(){
-    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance." : ".$this->_film." ".$this->_role;
+    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance;//" : ".$this->_film." ".$this->_role." ".$this->_casting;
 }
 
 
@@ -131,6 +134,7 @@ public function __toString(){
 public function getRole(){
     return $this->_role;
 }
+	//setters
 
 public function setRole($_role){
     $this-> _role = $_role;
