@@ -8,20 +8,29 @@ $ridleyScott = new Realisateur("SCOTT","Ridley","Homme","30-11-1937");
 $timburton = new Realisateur ("BURTON","Tim","Homme","25-08-1958");
 $georgelucas = new Realisateur("LUCAS","George","Homme","14-05-1944");
 
+$genre1 = new Genre("Science Fiction");
+$genre2 = new Genre("Action");
+$genre3 = new Genre("Fantastique");
+$genre4 = new Genre("Comédie");
+$genre5 = new Genre("Film Historique");
+$genre6 = new Genre("policier");
+$genre7 = new Genre("Suspense");
+$genre8 = new Genre("Drame");
+
 
 //films
 
-$film1 = new Film("BLADE RUNNER",1982,117,"Science Fiction",$ridleyScott);
-$film2 = new Film("BLACK RAIN",1989,125,"Action",$ridleyScott);
-$film3 = new Film("GLADIATOR",2000,155,"Film hitorique",$ridleyScott);
-$film4 = new Film("BATMAN",1992,126,"Fantastique",$timburton);
-$film5 = new Film("BEETLEJUICE",1988,92,"Fantastique",$timburton);
-$film5 = new Film("SLEEPY HOLLOW",1999,106,"Fantastique",$timburton);
-$film6 = new Film("STAR WARS 4",1977,121,"Science Fiction",$georgelucas);
-$film7 = new Film("AMERICAN GRAFFITI",1973,112,"Comédie",$georgelucas);
-$film8 = new Film("STAR WARS 1",1999,133,"Science Fiction",$georgelucas);
-$film9 = new Film("STAR WARS 2",2002,142,"Science Fiction",$georgelucas);
-$film10 = new Film("STAR WARS 3",2005,140,"Science Fiction",$georgelucas);
+ $film1 = new Film("BLADE RUNNER",1982,117,$genre1,$ridleyScott);
+ $film2 = new Film("BLACK RAIN",1989,125,$genre2,$ridleyScott);
+ $film3 = new Film("GLADIATOR",2000,155,$genre5,$ridleyScott);
+ $film4 = new Film("BATMAN",1992,126,$genre3,$timburton);
+ $film5 = new Film("BEETLEJUICE",1988,92,$genre3,$timburton);
+ $film5 = new Film("SLEEPY HOLLOW",1999,106,$genre3,$timburton);
+ $film6 = new Film("STAR WARS 4",1977,121,$genre1,$georgelucas);
+ $film7 = new Film("AMERICAN GRAFFITI",1973,112,$genre4,$georgelucas);
+ $film8 = new Film("STAR WARS 1",1999,133,$genre1,$georgelucas);
+ $film9 = new Film("STAR WARS 2",2002,142,$genre1,$georgelucas);
+ $film10 = new Film("STAR WARS 3",2005,140,$genre1,$georgelucas);
 
 
 // TEST D'AFFICHAGE
@@ -37,14 +46,30 @@ echo $timburton->afficherFilm();
 
 echo "<h4>$georgelucas<br></h4>";
 echo $georgelucas->afficherFilm();
+echo"<br>";
 
 	//affchage genre de films
-$film11 = new Film("BLADE RUNNER",1982,117,"Science Fiction",$ridleyScott);
-$genre1 = new Genre("FANTASTIQUE");
-$film11 = new Film("BLADE RUNNER",1982,117,$genre1,$ridleyScott);
+
+echo "<h3><i>TEST D'AFFICHAGE DE FILMS PAR GENRE<br></i></h3>";
+
 echo"<h4> $genre1<br></h4>";
-$genre1->afficherGenre();
-echo $film11;
+echo $genre1->afficherGenre();
+echo"<h4> $genre2<br></h4>";
+echo $genre2->afficherGenre();
+echo"<h4> $genre3<br></h4>";
+echo $genre3->afficherGenre();
+echo"<h4> $genre4<br></h4>";
+echo $genre4->afficherGenre();
+echo"<h4> $genre5<br></h4>";
+echo $genre5->afficherGenre();
+echo"<h4> $genre6<br></h4>";
+echo $genre6->afficherGenre();
+echo"<h4> $genre7<br></h4>";
+echo $genre7->afficherGenre();
+echo"<h4> $genre8<br></h4>";
+echo $genre8->afficherGenre();
+
+
 
 //Acteurs
 

@@ -43,7 +43,7 @@ public function addFilm(Film $film){//fonction qui permet d'ajouter un film
 public function afficherGenre(){
 	$result = "";
     foreach  ($this->_film as $film){//attention on ne peut utiliser le $this que dans sa propre classe
-        $result .=$film->getFilm();
+        $result .=$film->getTitre()."<br>";
     }
 	return $result;
 }

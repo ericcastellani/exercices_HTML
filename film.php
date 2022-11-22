@@ -4,18 +4,19 @@ Class Film{
     private string $_titre;
     private string $_dateSortie;
     private int $_duree;
-    private string $_genre;
+    private Genre $_genre;
     private  Realisateur $_realisateur; // à changer class Realisateur ==>private Realisateur $_realisateur
 
     //constructeur
 
-    public function __construct($_titre,$_dateSortie,$_duree,$_genre,Realisateur $_realisateur){// à changer class Realisateur
+    public function __construct($_titre,$_dateSortie,$_duree,Genre $_genre,Realisateur $_realisateur){// à changer class Realisateur
         $this-> _titre = $_titre;
         $this-> _dateSortie = $_dateSortie;
         $this-> _duree = $_duree;
         $this-> _genre = $_genre;
         $this-> _realisateur = $_realisateur;
 		$this->_realisateur-> addFilm($this);
+		$this->_genre-> addFilm($this);
 
     }
     // toString
