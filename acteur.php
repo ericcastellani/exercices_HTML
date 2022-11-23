@@ -1,5 +1,7 @@
 <?php
 
+//----------------------CLASSE ACTEUR-----------------------------------
+
 
 Class Acteur {
     private string $_nom;
@@ -15,6 +17,7 @@ public function __construct($_nom,$_prenom,$_film,$_alias){
     $this->_prenom = $_prenom;
     $this->_film = $_film;
     $this->_alias = $_alias;
+
 
 
 }
@@ -57,12 +60,34 @@ public function setAlias($_alias){
     $this-> _alias = $_alias;
 }
 
+// Méthode afficher alias
+public function afficherFilm(){
+	$result = "";
+    foreach  ($this->_alias as $alias){ 
+        $result .= $alias->getAlias()."   <br>";
+    }
+	return $result;
+}
+
+// Méthode 
+
+
 
 }
+// ------------------FIN DE CLASSE ACTEUR-------------------------
+
+//-----------------AFFICHAGE TESTS--------------------------
+
 $harry  = new Acteur("FORD","Harrison","blade runner","---blade----");
 echo "$harry <br>";
-$alias="chasseur de reliquants";
+$alias="chasseur de reliquant";
 echo "$alias<br>";
 
 $harry = new Acteur("FORD","Harrison","blade runner",$alias);
 echo $harry;
+
+$alias2="Hian solo";
+$alias3="indian jones";
+$alias4="Mr working girl";
+$harry->afficherFilm();
+
