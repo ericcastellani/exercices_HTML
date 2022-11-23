@@ -123,7 +123,7 @@ public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
 // toString()
 
 public function __toString(){
-    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance;//" : ".$this->_film." ".$this->_role." ".$this->_casting;
+    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance;
 }
 
 

@@ -72,7 +72,7 @@ echo $genre8->afficherGenre();
 
 
 //Acteurs et castings
-
+echo "<h3><i>ACTEURS et CASTING<br></i></h3>";
 //$casting1= new Acteur($film6,"hian solo");
 $harrisonFord = new Acteur ("FORD","Harisson","Homme","13-07-1942");
 echo $harrisonFord;
