@@ -16,6 +16,7 @@ public function __construct($_nom,$_prenom,$_film,$_alias){
     $this->_film = $_film;
     $this->_alias = $_alias;
 
+
 }
 
 // Méthode toString()
@@ -41,10 +42,6 @@ public function getFilm(){
 public function getAlias(){
     return $this->_alias;
 }
-        //setters
-public function setNom(){
-    $this->_nom = $_nom;
-}
 
     //setters
 public function setNom($_nom){
@@ -56,9 +53,11 @@ public function setPrenom($_prenom){
 public function setFilm($_film){
     $this->_film = $_film;
 }
-public function setPrenom($_alias){
+public function setAlias($_alias){
     $this-> _alias = $_alias;
 }
 
 
 }
+$harry  = new Acteur("FORD","Harrison","blade runner","chasseur de reliquant");
+echo $harry;
