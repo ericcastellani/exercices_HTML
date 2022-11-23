@@ -59,5 +59,10 @@ public function setAlias($_alias){
 
 
 }
-$harry  = new Acteur("FORD","Harrison","blade runner","chasseur de reliquant");
+$harry  = new Acteur("FORD","Harrison","blade runner","---blade----");
+echo "$harry <br>";
+$alias="chasseur de reliquants";
+echo "$alias<br>";
+
+$harry = new Acteur("FORD","Harrison","blade runner",$alias);
 echo $harry;
