@@ -51,7 +51,7 @@ public function setDateNaissance($_dateNaissance){
 
 
 
-}
+}// FIN DE LA CLASSE PERSONNE
 
 //--------------------CLASSE  EXTENDS REALISATEUR------------------------------------------------------------------------------
 
@@ -104,6 +104,9 @@ public function afficherFilm(){
 }
 
 }
+//--------------------------------------FIN DE LA CLASSE REALISATEUR------------------------------------------
+
+
 
 //--------------------------------------CLASSE EXTENDS ACTEUR--------------------------------------------------
 
@@ -125,8 +128,40 @@ public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
 public function __toString(){
     return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance;
 }
+//getters et setters
+
+    //getters
+
+public function getCasting(){
+    return $this->_casting;
+}
+	//setters
+
+public function setCasting($_casting){
+    $this-> _casting = $_casting;
+}
 
 
+//METHODE addCasting
+public function addCasting($_casting){//fonction qui permet d'ajouter un casting
+    $this->_casting[]=$casting;
+}
+//METHODE afficherCasting
+
+public function afficherCasting(){
+	$result = "";
+    foreach  ($this->_casting as $casting){
+        $result .= $casting->getCasting();
+
+    }
+	return $result;
+}
+
+
+
+}
+
+//---------------------FIN DE LA CLASSE ACTEUR-----------------------------
 /*getters et setters
 
     //getters
@@ -141,7 +176,7 @@ public function setRole($_role){
 }*/
 
 
-}
+
 
 /*tests d'affichage
 

@@ -76,8 +76,10 @@ echo "<h3><i>ACTEURS et CASTING<br></i></h3>";
 //$casting1= new Acteur($film6,"hian solo");
 $harrisonFord = new Acteur ("FORD","Harisson","Homme","13-07-1942");
 echo $harrisonFord;
-
-$casting1=[$film6,"hian solo"];
+$castingHf1=[$film6,"hian solo"];
+$castingHf2=["blade runner","blade"];
+$harrisonFord = new Acteur ("FORD","Harisson","Homme","13-07-1942",$castingHf2);
+$harrisonFord->afficherCasting();
 
 
 
