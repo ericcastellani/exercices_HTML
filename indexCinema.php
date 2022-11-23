@@ -71,14 +71,23 @@ echo $genre8->afficherGenre();
 
 
 
-//Acteurs et castings
+    //Acteurs et castings
+
+
 echo "<h3><i>ACTEURS et CASTING<br></i></h3>";
-//$casting1= new Acteur($film6,"hian solo");
+/*$casting1= new Acteur($film6,"hian solo");
+//$harrisonFord = new Acteur ("FORD","Harisson","Homme","13-07-1942",$castingHf1);
+//echo $harrisonFord;
+$castingHf1=("star wars","hian solo");
+$castingHf2=("blade runner","blade");
+$castingHf3=("star wars 4","hian solo");
+$castingHf4=("Indiana Johnes","Indiana");
+$harrisonFord = new Acteur ("FORD","Harisson","Homme","13-07-1942",$castingHf1);
+echo $harrisonFord;*/
+
+
 $harrisonFord = new Acteur ("FORD","Harisson","Homme","13-07-1942");
 echo $harrisonFord;
-$castingHf1=[$film6,"hian solo"];
-$castingHf2=["blade runner","blade"];
-$harrisonFord = new Acteur ("FORD","Harisson","Homme","13-07-1942",$castingHf2);
 $harrisonFord->afficherCasting();
 
 
