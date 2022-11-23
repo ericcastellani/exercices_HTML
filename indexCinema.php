@@ -71,7 +71,14 @@ echo $genre8->afficherGenre();
 
 
 
-//Acteurs
+//Acteurs et castings
+
+$casting1=($film6,"Hian Solo");
+$harrisonFord = ("FORD","Harisson","Homme","13-07-1942",$casting1);
+
+
+
+
 
 //$michaelKeaton = new Acteur ("KEATON","Michael","Homme","05-09-1951","BATMAN");
 
