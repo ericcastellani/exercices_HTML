@@ -45,7 +45,9 @@ public function setRole($_role){
 	$this->_role = $_role;
 }
 
-
+public function afficherRole(){
+	
+}
 
 
 

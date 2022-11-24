@@ -3,6 +3,8 @@
 require "film.php";
 require "personneCinema.php";
 require "genreCinema.php";
+require "casting.php";
+
 // Réalisateurs
 $ridleyScott = new Realisateur("SCOTT","Ridley","Homme","30-11-1937");
 $timburton = new Realisateur ("BURTON","Tim","Homme","25-08-1958");
@@ -71,14 +73,25 @@ echo $genre8->afficherGenre();
 
 
 
-    //Acteurs et castings
+    //Casting
+$hf= new Acteur("FORD","Harrison","Homme","13-07-1942");
+
+$casting1= new Casting("FORD","blade runner","chasseur de répliquant");
+$casting2= new Casting("FORD","starwars4","hian solo");
+$casting3= new Casting("FORD","indian jones","indiana");
 
 
-echo "<h3><i>ACTEURS et CASTING<br></i></h3>";
 
-$casting1 = ["FORD","blade runner","chasseur de reliquant"];
-$harrisonFord = new Acteur ("FORD","Harisson","Homme","13-07-1942",$casting1);
-echo $harrisonFord;
+
+echo "$hf <br>";
+
+echo "$casting1<br>";
+echo "$casting2<br>";
+echo "$casting3<br>";
+
+
+
+
 
 
 
