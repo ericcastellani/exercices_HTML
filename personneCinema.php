@@ -143,7 +143,7 @@ public function setCasting($_casting){
 
 
 //METHODE addCasting
-public function addCasting($_casting){//fonction qui permet d'ajouter un casting
+public function addCasting($casting){//fonction qui permet d'ajouter un casting
     $this->_casting[]=$casting;
 }
 //METHODE afficherCasting
@@ -162,35 +162,3 @@ public function afficherCasting(){
 }
 
 //---------------------FIN DE LA CLASSE ACTEUR-----------------------------
-/*getters et setters
-
-    //getters
-
-public function getRole(){
-    return $this->_role;
-}
-	//setters
-
-public function setRole($_role){
-    $this-> _role = $_role;
-}*/
-
-
-
-
-/*tests d'affichage
-
-$ridleyScott = new realisateur("SCOTT","Ridley","Homme","30-11-1937","BLADE RUNNER","Film d'anticipation ");
-echo $ridleyScott;
-
-// Méthode afficherFilm
-
-public function afficherFilm($film){
-	$result = "";
-    foreach  ($this->_film as $film){//attention on ne peut utiliser le $this que dans sa propre classe
-        $result .= $film->getTitre()." : ".$film->getAnnee()."  ".$film->getDuree()." ".$film->getGenre()."   <br>";
-    }
-	return $result;
-}
-
-$film1->afficherFilm();*/

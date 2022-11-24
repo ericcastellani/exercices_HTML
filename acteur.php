@@ -6,17 +6,16 @@
 Class Acteur {
     private string $_nom;
     private string $_prenom;
-    private string $_film;
-    private string $_alias;
+    private array $_casting;
 
 
     // constructeur
 
-public function __construct($_nom,$_prenom,$_film,$_alias){
+public function __construct($_nom,$_prenom,$_casting){
     $this->_nom = $_nom;
     $this->_prenom = $_prenom;
-    $this->_film = $_film;
-    $this->_alias = $_alias;
+	$this->_casting = [];
+
 
 
 
@@ -25,7 +24,7 @@ public function __construct($_nom,$_prenom,$_film,$_alias){
 // Méthode toString()
 
 public function __toString(){
-    return $this->_nom."  ".$this->_prenom." / ".$this->_film."    ".$this->_alias;
+    return $this->_nom."  ".$this->_prenom." / ";
 }
 
 
@@ -39,12 +38,10 @@ public function getNom(){// voir si à changer
 public function getPrenom(){
     return $this->_prenom;
 }
-public function getFilm(){
-    return $this->_film;
+public function getCasting(){
+    return $this->_casting;
 }
-public function getAlias(){
-    return $this->_alias;
-}
+
 
     //setters
 public function setNom($_nom){
@@ -53,23 +50,27 @@ public function setNom($_nom){
 public function setPrenom($_prenom){
     $this-> _prenom = $_prenom;
 }
-public function setFilm($_film){
-    $this->_film = $_film;
-}
-public function setAlias($_alias){
-    $this-> _alias = $_alias;
+public function setCasting($_casting){
+    $this->_casting = $_casting;
 }
 
-// Méthode afficher alias
-public function afficherFilm(){
+
+
+
+// Méthode afficher Casting
+public function afficherCasting(){
 	$result = "";
-    foreach  ($this->_alias as $alias){ 
-        $result .= $alias->getAlias()."   <br>";
-    }
-	return $result;
+	foreach($this->_casting as $casting){
+		$result.=$casting->getCasting();//." : ".$film->getdateSortie()."<br>";
+}
 }
 
-// Méthode 
+// Méthode addRole
+
+// Méthode AddRole
+public function addCasting($casting){//fonction qui permet d'ajouter un casting
+    $this->_casting[]=$casting;
+}	
 
 
 
@@ -78,16 +79,12 @@ public function afficherFilm(){
 
 //-----------------AFFICHAGE TESTS--------------------------
 
-$harry  = new Acteur("FORD","Harrison","blade runner","---blade----");
-echo "$harry <br>";
-$alias="chasseur de reliquant";
-echo "$alias<br>";
+$casting1 = ["Ford Harrison","Blade runner","blade"];
+$casting2 = ["Ford Harrison","India Jones","indiana"];
+$casting3 = ["Ford Harrison","Wording girl","mr "];
 
-$harry = new Acteur("FORD","Harrison","blade runner",$alias);
-echo $harry;
+$harry = new acteur("ford","harrison",$casting1);
+echo $harry->afficherCasting();
 
-$alias2="Hian solo";
-$alias3="indian jones";
-$alias4="Mr working girl";
-$harry->afficherFilm();
+
 
