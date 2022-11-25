@@ -45,6 +45,13 @@ public function setFilm($_film){
 public function setRole($_role){
 	$this->_role = $_role;
 }
+/*public function afficherCasting(){
+	$result = "";
+    foreach  ($this->_casting as $casting){
+        $result.=$casting->getActeur().$casting->getFilm()." / ".$casting->getRole();
+    }
+	return $result;
+}*/
 
 public function afficherRole(){
 	

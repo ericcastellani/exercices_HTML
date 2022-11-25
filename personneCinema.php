@@ -127,7 +127,7 @@ public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
 // toString()
 
 public function __toString(){
-    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance;
+    return $this->_nom." : ".$this->_prenom." / ".$this->_sexe."  ".$this->_dateNaissance." ";
 }
 //getters et setters
 
@@ -152,8 +152,7 @@ public function addCasting($casting){//fonction qui permet d'ajouter un casting
 public function afficherCasting(){
 	$result = "";
     foreach  ($this->_casting as $casting){
-        $result .= $casting->getCasting();
-
+        $result .=$casting->getActeur()."__".$casting->getFilm()." */* ".$casting->getRole();
     }
 	return $result;
 }
