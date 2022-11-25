@@ -79,25 +79,25 @@ echo $genre8->afficherGenre();
 	echo "<h3><i>TEST D'AFFICHAGE DE CASTINGS<br></i></h3>";
 
 
-$harrisonford= new Acteur("FORD","Harrison","Homme","13-07-1942");
+$FORD= new Acteur("FORD","Harrison","Homme","13-07-1942");
 
-$casting1= new Casting($harrisonford,$film1,"chasseur de répliquant");
-$casting2= new Casting($harrisonford,$film6,"hian solo");
-$casting3= new Casting($harrisonford,"indian jones","indiana");
-$casting4= new Casting($harrisonford,"pretty woman","Mr ????");
+$casting1= new Casting($FORD,$film1,"chasseur de répliquant");
+$casting2= new Casting($FORD,$film6,"hian solo");
+$casting3= new Casting($FORD,"indian jones","indiana");
+$casting4= new Casting($FORD,"pretty woman","Mr ????");
 
-echo "$harrisonford<br>";
-echo $harrisonford->afficherCasting();
-
-
+echo "$FORD<br>";
+echo $FORD->afficherCasting();
 
 
 
-/*
+
+
+
 echo "$casting1<br>";
 echo "$casting2<br>";
 echo "$casting3<br>";
-*/
+
 
 
 
