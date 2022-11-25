@@ -152,7 +152,7 @@ public function addCasting($casting){//fonction qui permet d'ajouter un casting
 public function afficherCasting(){
 	$result = "";
     foreach  ($this->_casting as $casting){
-        $result .=$casting->getActeur()."__".$casting->getFilm()." */* ".$casting->getRole();
+        $result .=$casting->getNom()."__".$casting->getFilm()." */* ".$casting->getRole()."--------------";
     }
 	return $result;
 }
