@@ -112,7 +112,7 @@ public function afficherFilm(){
 Class Acteur extends Personne{
 	//private array $_film; // il ne reste plus que casting car casting reprend film -rôle et nom de l'acteur
     //private array $_role;
-	private Casting $_casting;
+	private array $_casting;
 
     // constructeur
 
@@ -121,6 +121,7 @@ public function __construct($_nom,$_prenom,$_sexe,$_dateNaissance){
 	//$this->_film = [];
     //$this->_role = [];
 	$this->_casting = [];
+
 
 }
 // toString()
